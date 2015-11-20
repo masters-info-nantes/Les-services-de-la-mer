@@ -44,6 +44,7 @@ public class Bank {
 	
 	public boolean payer(String numero, String cryptograme, String devise, double montant){
 		if(verifierCarte(numero, cryptograme)){
+			//faire la conversion ici
 			return debiterCompte(getCarte(numero,cryptograme), montant);
 		}
 		return false;
