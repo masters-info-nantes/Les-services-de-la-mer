@@ -44,7 +44,10 @@ public class Fournisseur {
 	}
 	
 	public void payerProduit(String id, int quantite){
-		
+		Produit p = getProduit(id);
+		if(p.getReserve()){
+			stock.put(id, stock.get(id) - quantite);
+		}
 	}
 	
 }

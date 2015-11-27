@@ -42,10 +42,14 @@ public class Bank {
 		return true;
 	}
 	
+	public double convertir(double montant){
+		return montant;
+	}
+	
 	public boolean payer(String numero, String cryptograme, String devise, double montant){
 		if(verifierCarte(numero, cryptograme)){
-			//faire la conversion ici
-			return debiterCompte(getCarte(numero,cryptograme), montant);
+			double montant_reel=convertir(montant);
+			return debiterCompte(getCarte(numero,cryptograme), montant_reel);
 		}
 		return false;
 	}
