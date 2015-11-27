@@ -4,23 +4,23 @@ import org.univnantes.alma.services.les_services_de_la_mer.services.Banque.api.v
 
 public class Compte implements ICompte {
 
-	private double value;
-	private String metadata;
+	private double solde;
+	private String IBAN;
 	
-	public Compte(double value, String metadata) {
+	public Compte(double solde, String iban) {
 		super();
-		this.value = value;
-		this.metadata = metadata;
+		this.solde = solde;
+		this.IBAN = iban;
 	}
 
 	@Override
 	public double getSolde() {
-		return value;
+		return solde;
 	}
 
 	@Override
-	public String getMetadata() {
-		return metadata;
+	public String getIBAN() {
+		return IBAN;
 	}
 
 }
