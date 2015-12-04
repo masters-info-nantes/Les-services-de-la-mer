@@ -2,11 +2,6 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.univnantes.alma.services</groupId>
-    <artifactId>les_services_de_la_mer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
   <artifactId>Boutique</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Boutique</name>
@@ -22,4 +17,12 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <packaging>pom</packaging>
+  <groupId>org.univnantes.alma.services</groupId>
+  <modules>
+  	<module>BoutiqueAPI</module>
+  	<module>BoutiqueApplication</module>
+  	<module>BoutiqueDomain</module>
+  	<module>BoutiqueInfra</module>
+  </modules>
 </project>
